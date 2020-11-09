@@ -2061,6 +2061,9 @@ namespace HtmlAgilityPack
                 CloseCurrentNode();
             }
 
+            if (_currentnode._starttag)
+                _currentnode._startnodeLength = _currentnode._outerlength;
+            
             return true;
         }
 

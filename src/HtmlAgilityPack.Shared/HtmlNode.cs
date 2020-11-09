@@ -56,6 +56,7 @@ namespace HtmlAgilityPack
 		internal HtmlNode _prevnode;
 		internal HtmlNode _prevwithsamename;
 		internal bool _starttag;
+		internal int _startnodeLength;
 		internal int _streamposition;
 		internal bool _isImplicitEnd;
 		internal bool _isHideInnerText;
@@ -240,6 +241,14 @@ namespace HtmlAgilityPack
 		{
 			get { return _endnode; }
 		}
+
+		/// <summary>
+		/// Gets the opening tag length of the node.
+		/// </summary>
+		public int StartNodeLength
+        {
+			get { return _startnodeLength; }
+        }
 
 		/// <summary>
 		/// Gets the first child of the node.
