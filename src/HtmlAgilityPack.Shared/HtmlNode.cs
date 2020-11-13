@@ -244,7 +244,7 @@ namespace HtmlAgilityPack
         /// <summary>
         /// Gets the opening tag length of the node.
         /// </summary>
-        public int StartNodeLength
+        public int StreamOpenNodeLength
         {
             get
             {
@@ -254,18 +254,6 @@ namespace HtmlAgilityPack
                     return _innerstartindex - _outerstartindex;
                 else
                     return _outerlength - _endnode._outerlength;
-            }
-        }
-
-
-        /// <summary>
-        /// Gets the outer start Index length of the node.
-        /// </summary>
-        public int OuterStartIndex
-        {
-            get
-            {
-                return _outerstartindex;
             }
         }
 
